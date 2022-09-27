@@ -1,60 +1,60 @@
-# Flix
-Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+# Android Project 3 - *Name of App Here*
 
-## Flix Part 2
-#### REQUIRED (10pts)
+Submitted by: **Your Name Here**
 
-- [X] (8pts) Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
-- [X] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+**Name of your app** is a movie browsing app that allows users to browse movies currently playing in theaters.
 
-#### BONUS
+Time spent: **X** hours spent in total
 
-- [ ] Implement a shared element transition when user clicks into the details of a movie (1 point).
-- [ ] Trailers for popular movies are played automatically when the movie is selected (1 point).
-  - [ ] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
-  - [ ] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
-- [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
-- [ ] Apply data binding for views to help remove boilerplate code. (1 point)
-- [X] Add a rounded corners for the images using the Glide transformations. (1 point)
+## Required Features
 
-### App Walkthough GIF
+The following **required** functionality is completed:
 
-<img src="https://media0.giphy.com/media/n30Jgb3a2cmXC7NSPu/giphy.gif?cid=790b76110feb2d1d480056cb61c7b9b3391d8116e560751d&rid=giphy.gif&ct=g" width=250><br>
+- [x] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
+- [x] **Parse through JSON data and implement a RecyclerView to display all movies**
+- [x] **Use Glide to load and display movie poster images**
 
-### Notes
-My biggest challenge while working on part 2 was, trying to get YoutubePlayerView to work. My app kept crashing everytime I attempted to watch the trailer video, and I got the error "E/YouTubeAndroidPlayerAPI: Embed config is not supported in RemoteEmbeddedPlayer." I searched on Google, and looked at stack overflow posts about this issue, but could not find a helpful solution. The video do not load on Android API 27, and at least loads on API 30. I have played around with the layout height of the youtube video in the layout file, and finally got it to work without crashing the app. However, unfortunately videos are not exactly centered. I checked videos on YouTube app, and the same issues persist on the Youtube App as well. I could not find a solution to this problem.
+The following **optional** features are implemented:
 
-## Open-source libraries used
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
+- [x] Improve and customize the user interface through styling and coloring
+- [x] Implement orientation responsivity
+  - App should neatly arrange data in both landscape and portrait mode
+- [x] Implement Glide to display placeholder graphics during loading
+  - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
 
----
+The following **additional** features are implemented:
 
-## Flix Part 1
+- [ ] List anything else that you can get done to improve the app functionality!
 
-### User Stories
+## Video Walkthrough
 
-#### REQUIRED (10pts)
-- [X] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
+Here's a walkthrough of implemented user stories:
 
-#### BONUS
-- [X] (2pts) Views should be responsive for both landscape/portrait mode.
-   - [X] (1pt) In portrait mode, the poster image, title, and movie overview is shown.
-   - [X] (1pt) In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-- [X] (2pts) Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
-- [X] (2pts) Improved the user interface by experimenting with styling and coloring.
-- [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
-### App Walkthough GIF
+## Notes
 
-<img src="https://media2.giphy.com/media/RGIpcprM3ErrNdiuhM/giphy.gif?cid=790b761134579e601a295d98a9339a55665d52ebccb6a99d&rid=giphy.gif&ct=g" width=500><br>
+Describe any challenges encountered while building the app.
 
-### Notes
-My biggest challenge was figuring out how to put placeholder pictures via R.drawable. I first attempted to create a shape on drawable creating a new xml file, because first time I added a picture did not work for some reason. After I gave my IDE some time, I could use the image as placeholder image. My other challenge was I had difficulty understanding Heterogeneous Layouts inside RecyclerView. Reading about Heterogeneous Layouts inside RecyclerView on Codepath helped me understand a lot better.
+## License
 
+    Copyright [yyyy] [name of copyright owner]
 
-### Open-source libraries used
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Androids
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
