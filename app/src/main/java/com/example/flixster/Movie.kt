@@ -13,6 +13,7 @@ data class Movie (
     private val posterPath: String,
     val title: String,
     val overview: String,
+    val release: String
         ) : Parcelable
 {
     @IgnoredOnParcel
@@ -28,7 +29,8 @@ data class Movie (
                         movieJson.getDouble("vote_average"),
                         movieJson.getString("poster_path"),
                         movieJson.getString("title"),
-                        movieJson.getString("overview")
+                        movieJson.getString("overview"),
+                        movieJson.getString("release_date")
                     )
                 )
             }
